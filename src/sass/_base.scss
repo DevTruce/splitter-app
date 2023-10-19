@@ -10,6 +10,11 @@
   // border: 1px solid red;
 }
 
+html {
+  box-sizing: border-box;
+  font-size: 100%; // 1rem = 16px
+}
+
 body {
   box-sizing: border-box;
   min-height: 100vh;
@@ -18,10 +23,11 @@ body {
   font-size: $font-default;
   font-weight: 700;
 
-  color: $white;
+  color: $dark-grayish-cyan;
   background-color: $light-grayish-cyan;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }

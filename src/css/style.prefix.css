@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap");
+/*
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+  font-family: "Space Mono";
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+  background-color: hsl(185, 41%, 84%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headerLogo {
+  position: fixed;
+  top: 2.5rem;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.billInputContainer {
+  text-align: left;
+}
+
+.bill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.billInput {
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  text-align: right;
+  font-family: "Space Mono";
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  height: 1.5rem;
+  width: 100%;
+  border: 0.1rem solid transparent;
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+  margin-left: -0.6rem;
+}
+.billInputSVG {
+  position: relative;
+  top: 2.05rem;
+}
+
+.selectTipText {
+  margin: 0.5rem 0 1rem 0;
+}
+
+.buttonStyles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 0.2rem;
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+}
+
+.tipPercentButton {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1rem;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0.3rem;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vc2Fzcy9fdmFyaWFibGVzLnNjc3MiLCIuLi9zYXNzL19iYXNlLnNjc3MiLCJzdHlsZS5jb21wLmNzcyIsIi4uL3Nhc3MvX2xheW91dC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVRLHFHQUFBO0FDaUJSOzs7OztDQUFBO0FDakJBOzs7RUFHRSxVQUFBO0VBQ0EsU0FBQTtBQ01GOztBREFBO0VBQ0UsOEJBQUE7VUFBQSxzQkFBQTtFQUNBLGVBQUE7QUNHRjs7QURBQTtFQUNFLDhCQUFBO1VBQUEsc0JBQUE7RUFDQSxpQkFBQTtFQUVBLHlCQUFBO0VBQ0EsZURUYTtFQ1ViLGdCQUFBO0VBRUEseUJEckJrQjtFQ3NCbEIsb0NEcEJtQjtFQ3NCbkIsb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSxtQkFBQTtFQUNBLHdCQUFBO01BQUEscUJBQUE7VUFBQSx1QkFBQTtBQ0FGOztBQzVCQTtFQUNFLGVBQUE7RUFDQSxXQUFBO0FEK0JGOztBQzVCQTtFQUNFLGtDSERNO0VHRU4sYUFBQTtFQUNBLHFCSGVxQjtBRWdCdkI7O0FDckJBO0VBQ0UsZ0JBQUE7QUR3QkY7O0FDckJBO0VBQ0Usb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSxtQkFBQTtBRHdCRjtBQ3RCRTtFQUNFLG9DSHhCc0I7RUd5QnRCLFlBQUE7RUFDQSxpQkFBQTtFQUNBLHlCQUFBO0VBQ0EsZUh0Qlc7RUd1QlgsZ0JBQUE7RUFDQSwwQkhsQ2E7RUdtQ2IsY0FBQTtFQUNBLFdBQUE7RUFDQSxnQ0FBQTtFQUNBLHFCSGhCaUI7RUdpQmpCLG9DQUFBO0VBQ0Esb0JBQUE7QUR3Qko7QUN0Qkk7RUFDRSxrQkFBQTtFQUNBLFlBQUE7QUR3Qk47O0FDakJFO0VBQ0UsdUJBQUE7QURvQko7O0FDaEJBO0VBQ0Usb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSx5QkFBQTtNQUFBLHNCQUFBO1VBQUEsbUJBQUE7RUFDQSx3QkFBQTtNQUFBLHFCQUFBO1VBQUEsdUJBQUE7RUFDQSxxQ0g1RGU7RUc2RGYscUJIdkNtQjtFR3dDbkIsb0NBQUE7QURtQkY7O0FDaEJBO0VBQ0UsYUFBQTtFQUNBLGtDQUFBO0VBQ0EscUNBQUE7RUFDQSxhQUFBO0VBQ0Esd0JBQUE7S0FBQSxxQkFBQTtVQUFBLGdCQUFBO0VBQ0EsdUJIbEVNO0FFcUZSOztBQ0tBO0VBQ0UsZUFBQTtFQUNBLGNBQUE7QURGRiIsImZpbGUiOiJzdHlsZS5wcmVmaXguY3NzIn0= */

@@ -10,10 +10,10 @@ $white: hsl(0, 0%, 100%);
 
 //////////////////////////////////////////////////
 // FONTS
-$font-default: 16;
-$font-small: 16;
-$font-medium: 16;
-$font-large: 16;
+$font-small: 0.875; //14 px
+$font-default: 1rem; //16px
+$font-medium: 0;
+$font-large: 1.5rem; //24px
 
 //////////////////////////////////////////////////
 // MEDIA QUERY MANAGER
@@ -23,21 +23,5 @@ The designs were created to the following widths:
 - Mobile: 375px
 - Desktop: 1440px
 */
-
-/*
-
-
-
-
-
-## Typography
-
-### Body Copy
-
-- Font size (form inputs): 24px
-
-### Font
-
-- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
-- Weights: 700
-*/
+$borderRadius-small: 0.2rem;
+$borderRadius-default: 0.5rem;
