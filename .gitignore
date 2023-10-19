@@ -1,0 +1,13 @@
+
+###### important removal ######
+/node_modules
+*.map
+
+###### remove ux/ui design files ######
+*.sketch
+*.fig
+*.xd
+
+###### exclude junk ######
+.DS_Store
+.prettierignore
