@@ -13,23 +13,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/DevTruce/tip-calculator-app">
+  <a href="https://github.com/DevTruce/splitter-app">
     <img src="src/imgs/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Tip Calculator App</h3>
+<h3 align="center">Splitter App</h3>
 
   <p align="center">
     calculate a tip for the bill
     <br />
-    <a href="https://github.com/DevTruce/tip-calculator-app" target="_blank"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/DevTruce/splitter-app" target="_blank"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://devtruce.github.io/tip-calculator-app/" target="_blank">View Demo</a>
+    <a href="https://devtruce.github.io/splitter-app/" target="_blank">View Demo</a>
     ·
-    <a href="https://github.com/DevTruce/tip-calculator-app/issues" target="_blank">Report Bug</a>
+    <a href="https://github.com/DevTruce/splitter-app/issues" target="_blank">Report Bug</a>
     ·
-    <a href="https://github.com/DevTruce/tip-calculator-app/issues" target="_blank">Request Feature</a>
+    <a href="https://github.com/DevTruce/splitter-app/issues" target="_blank">Request Feature</a>
   </p>
 </div>
 
@@ -96,25 +96,25 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- ## GitHub ##-->
 <!-- links -->
 
-[contributors-link]: https://github.com/DevTruce/tip-calculator-app/graphs/contributors
-[forks-link]: https://github.com/DevTruce/tip-calculator-app/network/members
-[stars-link]: https://github.com/DevTruce/tip-calculator-app/stargazers
-[issues-link]: https://github.com/DevTruce/tip-calculator-app/issues
-[license-link]: https://github.com/DevTruce/tip-calculator-app/blob/master/LICENSE.txt
+[contributors-link]: https://github.com/DevTruce/splitter-app/graphs/contributors
+[forks-link]: https://github.com/DevTruce/splitter-app/network/members
+[stars-link]: https://github.com/DevTruce/splitter-app/stargazers
+[issues-link]: https://github.com/DevTruce/splitter-app/issues
+[license-link]: https://github.com/DevTruce/splitter-app/blob/master/LICENSE.txt
 
 <!-- icons -->
 
-[contributors-icon]: https://img.shields.io/github/contributors/DevTruce/tip-calculator-app.svg?style=for-the-badge
-[forks-icon]: https://img.shields.io/github/forks/DevTruce/tip-calculator-app.svg?style=for-the-badge
-[stars-icon]: https://img.shields.io/github/stars/DevTruce/tip-calculator-app.svg?style=for-the-badge
-[issues-icon]: https://img.shields.io/github/issues/DevTruce/tip-calculator-app.svg?style=for-the-badge
-[license-icon]: https://img.shields.io/github/license/DevTruce/tip-calculator-app.svg?style=for-the-badge
+[contributors-icon]: https://img.shields.io/github/contributors/DevTruce/splitter-app.svg?style=for-the-badge
+[forks-icon]: https://img.shields.io/github/forks/DevTruce/splitter-app.svg?style=for-the-badge
+[stars-icon]: https://img.shields.io/github/stars/DevTruce/splitter-app.svg?style=for-the-badge
+[issues-icon]: https://img.shields.io/github/issues/DevTruce/splitter-app.svg?style=for-the-badge
+[license-icon]: https://img.shields.io/github/license/DevTruce/splitter-app.svg?style=for-the-badge
 
 <!-- ## Project ## -->
 
 [product-screenshot]: src/imgs/project-view1.png
 [product-screenshot]: src/imgs/project-view2.png
-[product-link]: https://devtruce.github.io/tip-calculator-app/
+[product-link]: https://devtruce.github.io/splitter-app/
 
 <!-- ## Tech & Tools ## -->
 <!-- links -->
