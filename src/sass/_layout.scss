@@ -2,7 +2,7 @@
 //
 
 .headerLogo {
-  position: fixed;
+  position: relative;
   top: 2.5rem;
 }
 
@@ -74,6 +74,19 @@
   height: 3rem;
   width: 100%;
   border: 1px solid transparent;
+
+  font-family: "Space Mono";
+  font-size: $font-default;
+  font-weight: 700;
+  color: $white;
+
+  &:hover {
+    color: $very-dark-cyan;
+    background-color: $very-light-grayish-cyan;
+  }
+
+  &:active {
+  }
 }
 
 .tipPercentButton {
@@ -181,8 +194,9 @@
 }
 
 .attribution {
-  position: fixed;
-  bottom: 0.3rem;
+  margin-top: 1rem;
+  position: relative;
+  bottom: 0.5rem;
 }
 
 .resetButton {
@@ -195,7 +209,13 @@
   border-radius: $borderRadius-small;
   margin-top: 1.5rem;
   height: 3rem;
+  // margin-bottom: 3rem;
 
-  // &:hover {
-  // }
+  &:hover {
+    color: $white;
+  }
+}
+
+.creator {
+  margin-left: 0.5rem;
 }
