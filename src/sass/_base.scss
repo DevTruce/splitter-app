@@ -5,18 +5,17 @@
 *::after {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 
   // for bebugging
   // border: 1px solid red;
 }
 
 html {
-  box-sizing: border-box;
   font-size: 100%; // 1rem = 16px
 }
 
 body {
-  box-sizing: border-box;
   min-height: 100vh;
 
   font-family: "Space Mono";

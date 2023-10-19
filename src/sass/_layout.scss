@@ -10,6 +10,7 @@
   background-color: $white;
   padding: 1rem;
   border-radius: $borderRadius-default;
+
   //   width: 100%;
   //   height: 100%;
 }
@@ -28,25 +29,30 @@
   flex-direction: column;
   align-items: center;
 
+  &Text {
+    align-self: flex-start;
+    margin-bottom: -1.2rem;
+    // margin-left: -0.3rem;
+  }
+
   &Input {
     background-color: $very-light-grayish-cyan;
     border: none;
     text-align: right;
     font-family: "Space Mono";
-    font-size: $font-default;
+    font-size: $font-large;
     font-weight: 700;
     color: $very-dark-cyan;
-    height: 1.5rem;
+    height: 3rem;
     width: 100%;
     border: 0.1rem solid transparent;
     border-radius: $borderRadius-small;
     padding: 0.3rem 0.6rem 0.3rem 0.3rem;
-    margin-left: -0.6rem;
 
     &SVG {
       position: relative;
-      top: 2.05rem;
-      //   left: 1rem;
+      top: 2.4rem;
+      left: 1rem;
     }
   }
 }
@@ -63,7 +69,10 @@
   justify-content: center;
   background-color: $very-dark-cyan;
   border-radius: $borderRadius-small;
-  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  // padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  height: 3rem;
+  width: 100%;
+  border: 1px solid transparent;
 }
 
 .tipPercentButton {
@@ -74,20 +83,27 @@
   column-gap: 1rem;
   color: $white;
 
-  //   &5P {
-  //   }
+  // &5P {
+  // }
 
-  //   &10P {
-  //   }
+  // &10P {
+  // }
 
-  //   &15P {
-  //   }
+  // &15P {
+  // }
 
-  //   &25P {
-  //   }
+  // &25P {
+  // }
 
-  //   &50P {
-  //   }
+  // &50P {
+  // }
+
+  &CustomP {
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
 }
 
 // .numberOfPeople {
