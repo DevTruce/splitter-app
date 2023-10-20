@@ -17,8 +17,23 @@ const displayTotalAmount = document.querySelector(".totalAmount");
 
 /////////////////////////////////////////////////
 //// VARIABLES
-let billInputValue = 0;
-let tipPercent = 0;
+let billInputValue = 142.55;
+let tipPercentInputValue = 0.25;
+let numberOfPeopleInputValue = 2;
+
+let tipAmount = 0;
+let totalAmount = 0;
+
+const calulateTip = function (billAmout, percentAmount) {
+  tipAmount = Math.round(
+    (billInputValue * tipPercentInputValue) / numberOfPeopleInputValue
+  );
+  displayTipAmount.textContent = tipAmount;
+};
+const calulateTotal = function () {
+  totalAmount = billInputValue + tipAmount;
+  displayTotalAmount.textContent = totalAmount;
+};
 
 /////////////////////////////////////////////////
 //// EVENT LISTENERS
@@ -30,6 +45,8 @@ const checkBillInput = function () {
       (event.key === 13 && !isNaN(inputBill.value))
     ) {
       billInputValue = Number(inputBill.value);
+      calulateTip();
+      calulateTotal();
 
       console.log(`Bill Input Value: ${typeof billInputValue}`); // DEBUGGING
       console.log(`Bill Input Value: ${billInputValue}`); // DEBUGGING
@@ -37,37 +54,75 @@ const checkBillInput = function () {
   });
 };
 
-const checkTipAmount = function () {
-  btn5Percent.addEventListener("click", function (event) {
-    tipPercent = 0.05;
-    console.log(tipPercent);
-  });
-  btn10Percent.addEventListener("click", function (event) {
-    tipPercent = 0.1;
-    console.log(tipPercent);
-  });
-  btn15Percent.addEventListener("click", function (event) {
-    tipPercent = 0.15;
-    console.log(tipPercent);
-  });
-  btn25Percent.addEventListener("click", function (event) {
-    tipPercent = 0.25;
-    console.log(tipPercent);
-  });
-  btn50Percent.addEventListener("click", function (event) {
-    tipPercent = 0.5;
-    console.log(tipPercent);
-  });
-  btnCustomPercent.addEventListener("keyup", function (event) {
+const checkNumberOfPeopleInput = function () {
+  inputNumberOfPeople.addEventListener("keyup", function (event) {
     if (
       event.key === "Enter" ||
-      (event.key === 13 && !isNaN(btnCustomPercent.value))
+      (event.key === 13 && !isNaN(inputBill.value))
     ) {
-      tipPercent = Number(btnCustomPercent.value);
-      console.log(tipPercent);
+      numberOfPeopleInputValue = Number(inputNumberOfPeople.value);
+      calulateTip();
+      calulateTotal();
+
+      console.log(`Number of people: ${numberOfPeopleInputValue}`); // DEBUGGING
     }
   });
 };
 
+btn5Percent.addEventListener("click", function (event) {
+  tipPercentInputValue = 0.05;
+  calulateTip();
+  calulateTotal();
+
+  console.log(`Tip percent: ${tipPercentInputValue}`); // DEBUGGING
+});
+btn10Percent.addEventListener("click", function (event) {
+  tipPercentInputValue = 0.1;
+  calulateTip();
+  calulateTotal();
+
+  console.log(`Tip percent: ${tipPercentInputValue}`); // DEBUGGING
+});
+btn15Percent.addEventListener("click", function (event) {
+  tipPercentInputValue = 0.15;
+  calulateTip();
+  calulateTotal();
+  console.log(tipAmount, totalAmount); // DEBUGGING
+
+  console.log(`Tip percent: ${tipPercentInputValue}`); // DEBUGGING
+});
+btn25Percent.addEventListener("click", function (event) {
+  tipPercentInputValue = 0.25;
+  calulateTip();
+  calulateTotal();
+
+  console.log(`Tip percent: ${tipPercentInputValue}`); // DEBUGGING
+});
+btn50Percent.addEventListener("click", function (event) {
+  tipPercentInputValue = 0.5;
+  calulateTip();
+  calulateTotal();
+  console.log(`Tip percent: ${tipPercentInputValue}`); // DEBUGGING
+});
+btnCustomPercent.addEventListener("keyup", function (event) {
+  if (
+    event.key === "Enter" ||
+    (event.key === 13 && !isNaN(btnCustomPercent.value))
+  ) {
+    tipPercentInputValue = Number(btnCustomPercent.value);
+    calulateTip();
+    calulateTotal();
+
+    console.log(`Custom tip percent: ${tipPercentInputValue}`); // DEBUGGING
+  }
+});
+
 checkBillInput();
-checkTipAmount();
+// checkTipAmountInput();
+checkNumberOfPeopleInput();
+
+const updateTipUI = function () {
+  displayTipAmount.textContent = `$${tipAmount}`;
+};
+
+updateTipUI();
