@@ -11,6 +11,8 @@ const btn25Percent = document.querySelector(".tipPercentButton25P");
 const btn50Percent = document.querySelector(".tipPercentButton50P");
 const btnCustomPercent = document.querySelector(".tipPercentButtonCustomP");
 const btnRest = document.querySelector(".resetButton");
+const cantBeZero = document.querySelector(".cantBeZero");
+const hide = document.querySelector(".hide");
 
 const displayTipAmount = document.querySelector(".totalTip");
 const displayTotalAmount = document.querySelector(".totalAmount");
@@ -31,10 +33,19 @@ const calulateTip = function (billAmout, percentAmount) {
     (billInputValue * tipPercentInputValue) / numberOfPeopleInputValue
   );
   displayTipAmount.textContent = `$${tipAmount}`;
+  console.log(`current tip amount is ${tipAmount}`);
+  console.log(`current bill Input is ${billInputValue}`);
+  console.log(`current tip percent is ${tipPercentInputValue}`);
+  console.log(`current number of people is ${numberOfPeopleInputValue}`);
 };
+
 const calulateTotal = function () {
-  totalAmount = billInputValue + tipAmount;
+  totalAmount = billInputValue / numberOfPeopleInputValue + tipAmount;
   displayTotalAmount.textContent = `$${totalAmount}`;
+  console.log(`current total amount is ${totalAmount}`);
+  console.log(`current bill Input is ${billInputValue}`);
+  console.log(`current tip amount is ${tipAmount}`);
+  console.log(`current number of people is ${numberOfPeopleInputValue}`);
 };
 
 const resetAll = function () {
@@ -45,39 +56,88 @@ const resetAll = function () {
 
   tipAmount = 0;
   totalAmount = 0;
+
+  // Reset Inputs
+  inputBill.value = "";
+  inputNumberOfPeople.value = "";
+  displayTipAmount.textContent = "$0";
+  displayTotalAmount.textContent = "$0";
+};
+
+const calcBillEnter = function () {
+  if (event.key === "Enter" || (event.key === 13 && !isNaN(inputBill.value))) {
+    billInputValue = Number(inputBill.value);
+
+    if (billInputValue > 0) {
+      inputBill.classList.remove("belowZero");
+      calulateTip();
+      calulateTotal();
+    } else {
+      inputBill.classList.add("belowZero");
+      inputBill.value = "";
+      inputBill.placeholder = "Must be exceed 1";
+    }
+  }
+};
+
+const calcBillBlur = function () {
+  billInputValue = Number(inputBill.value);
+
+  if (billInputValue > 0) {
+    inputBill.classList.remove("belowZero");
+    calulateTip();
+    calulateTotal();
+  } else {
+    inputBill.classList.add("belowZero");
+    inputBill.value = "";
+    inputBill.placeholder = "Must be exceed 1";
+  }
+};
+
+const calcNumberOfPeopleEnter = function () {
+  if (event.key === "Enter" || (event.key === 13 && !isNaN(inputBill.value))) {
+    numberOfPeopleInputValue = Number(inputNumberOfPeople.value);
+    if (numberOfPeopleInputValue > 0) {
+      cantBeZero.classList.add("hide");
+      calulateTip();
+      calulateTotal();
+    } else {
+      cantBeZero.classList.remove("hide");
+    }
+  }
+};
+
+const calcNumberOfPeopleBlur = function () {
+  numberOfPeopleInputValue = Number(inputNumberOfPeople.value);
+
+  if (numberOfPeopleInputValue > 0) {
+    cantBeZero.classList.add("hide");
+    calulateTip();
+    calulateTotal();
+    console.log(`working`);
+  } else {
+    cantBeZero.classList.remove("hide");
+    console.log(`less than 0`);
+  }
 };
 
 /////////////////////////////////////////////////
 //// EVENT LISTENERS
 
 inputBill.addEventListener("keyup", function (event) {
-  if (event.key === "Enter" || (event.key === 13 && !isNaN(inputBill.value))) {
-    billInputValue = Number(inputBill.value);
+  calcBillEnter();
+});
 
-    if (billInputValue >= 0) {
-      calulateTip();
-      calulateTotal();
-    } else {
-      inputBill.classList.add("belowZero");
-    }
-  }
+inputBill.addEventListener("blur", function (event) {
+  calcBillBlur();
 });
 
 inputNumberOfPeople.addEventListener("keyup", function (event) {
-  if (event.key === "Enter" || (event.key === 13 && !isNaN(inputBill.value))) {
-    numberOfPeopleInputValue = Number(inputNumberOfPeople.value);
-    console.log(numberOfPeopleInputValue);
-    if (numberOfPeopleInputValue > 0) {
-      inputNumberOfPeople.classList.remove("belowZero");
-      calulateTip();
-      calulateTotal();
-      return;
-    } else {
-      inputNumberOfPeople.classList.add("belowZero");
-      inputNumberOfPeople.value = "";
-      inputNumberOfPeople.placeholder = "Must be at least 1";
-    }
-  }
+  calcNumberOfPeopleEnter();
+});
+
+inputNumberOfPeople.addEventListener("blur", function (event) {
+  calcNumberOfPeopleBlur();
 });
 
 btn5Percent.addEventListener("click", function (event) {
@@ -110,8 +170,12 @@ btnCustomPercent.addEventListener("keyup", function (event) {
     event.key === "Enter" ||
     (event.key === 13 && !isNaN(btnCustomPercent.value))
   ) {
-    tipPercentInputValue = Number(btnCustomPercent.value);
+    tipPercentInputValue = Number(btnCustomPercent.value) / 100;
     calulateTip();
     calulateTotal();
   }
+});
+
+btnRest.addEventListener("click", function (event) {
+  resetAll();
 });
