@@ -71,6 +71,12 @@ body {
   padding: 0.3rem 0.6rem 0.3rem 0.3rem;
   box-sizing: border-box;
 }
+.billInput:focus {
+  outline: 0.2rem solid hsl(172, 67%, 45%);
+}
+.billInput:hover {
+  cursor: pointer;
+}
 .billInputSVG {
   position: relative;
   top: 2.4rem;
@@ -97,7 +103,8 @@ body {
 }
 .buttonStyles:hover {
   color: hsl(183, 100%, 15%);
-  background-color: hsl(189, 41%, 97%);
+  background-color: hsl(172, 67%, 45%);
+  cursor: pointer;
 }
 .tipPercentButton {
   display: grid;
@@ -142,6 +149,12 @@ body {
 }
 .numberOfPeopleInputContainer {
   width: 100%;
+}
+.numberOfPeopleInput:focus {
+  outline: 0.2rem solid hsl(172, 67%, 45%);
+}
+.numberOfPeopleInput:hover {
+  cursor: pointer;
 }
 .numberOfPeopleInputSVG {
   position: relative;
@@ -196,10 +209,18 @@ body {
 }
 .resetButton:hover {
   color: hsl(0, 0%, 100%);
+  cursor: pointer;
 }
 
 .creator {
   margin-left: 0.5rem;
+}
+
+.belowZero {
+  outline: 0.2rem solid red !important;
+}
+.belowZero:hover {
+  outline: 0.2rem solid red !important;
 }
 
 /*# sourceMappingURL=style.css.map */

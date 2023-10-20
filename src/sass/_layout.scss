@@ -51,6 +51,14 @@
     padding: 0.3rem 0.6rem 0.3rem 0.3rem;
     box-sizing: border-box;
 
+    &:focus {
+      outline: 0.2rem solid $color-strong-cyan;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
     &SVG {
       position: relative;
       top: 2.4rem;
@@ -82,7 +90,8 @@
 
   &:hover {
     color: $very-dark-cyan;
-    background-color: $very-light-grayish-cyan;
+    background-color: $color-strong-cyan;
+    cursor: pointer;
   }
 
   &:active {
@@ -151,6 +160,14 @@
       width: 100%;
     }
 
+    &:focus {
+      outline: 0.2rem solid $color-strong-cyan;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
     &SVG {
       position: relative;
       top: 2.4rem;
@@ -216,9 +233,18 @@
 
   &:hover {
     color: $white;
+    cursor: pointer;
   }
 }
 
 .creator {
   margin-left: 0.5rem;
+}
+
+.belowZero {
+  outline: 0.2rem solid red !important;
+
+  &:hover {
+    outline: 0.2rem solid red !important;
+  }
 }

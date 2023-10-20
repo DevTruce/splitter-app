@@ -30,11 +30,21 @@ const calulateTip = function (billAmout, percentAmount) {
   tipAmount = Math.round(
     (billInputValue * tipPercentInputValue) / numberOfPeopleInputValue
   );
-  displayTipAmount.textContent = tipAmount;
+  displayTipAmount.textContent = `$${tipAmount}`;
 };
 const calulateTotal = function () {
   totalAmount = billInputValue + tipAmount;
-  displayTotalAmount.textContent = totalAmount;
+  displayTotalAmount.textContent = `$${totalAmount}`;
+};
+
+const resetAll = function () {
+  // Variable Reset
+  billInputValue = 0;
+  tipPercentInputValue = 0;
+  numberOfPeopleInputValue = 1;
+
+  tipAmount = 0;
+  totalAmount = 0;
 };
 
 /////////////////////////////////////////////////
@@ -43,16 +53,33 @@ const calulateTotal = function () {
 inputBill.addEventListener("keyup", function (event) {
   if (event.key === "Enter" || (event.key === 13 && !isNaN(inputBill.value))) {
     billInputValue = Number(inputBill.value);
-    calulateTip();
-    calulateTotal();
+
+    if (billInputValue >= 0) {
+      calulateTip();
+      calulateTotal();
+    } else {
+      inputBill.classList.add("belowZero");
+    }
   }
 });
 
 inputNumberOfPeople.addEventListener("keyup", function (event) {
   if (event.key === "Enter" || (event.key === 13 && !isNaN(inputBill.value))) {
     numberOfPeopleInputValue = Number(inputNumberOfPeople.value);
-    calulateTip();
-    calulateTotal();
+    console.log(numberOfPeopleInputValue);
+    if (numberOfPeopleInputValue > 0) {
+      inputNumberOfPeople.classList.remove("belowZero");
+      calulateTip();
+      calulateTotal();
+
+      console.log(`RUN CALCS`);
+      return;
+    } else {
+      inputNumberOfPeople.classList.add("belowZero");
+      inputNumberOfPeople.value = "";
+      inputNumberOfPeople.placeholder = "Must be at least 1";
+      console.log(`ADD RED BORDER`);
+    }
   }
 });
 
