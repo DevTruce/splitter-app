@@ -17,10 +17,10 @@
     <img src="src/imgs/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Splitter App</h3>
+<h3 align="center">Splitter Calculator App</h3>
 
   <p align="center">
-    calculate a tip for the bill
+    A web app for easily splitting bills, calculating individual tip amounts, and sharing costs among friends.
     <br />
     <a href="https://github.com/DevTruce/splitter-app" target="_blank"><strong>Explore the docs »</strong></a>
     <br />
@@ -39,7 +39,11 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
     </li>
+    <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -56,7 +60,16 @@
   <img src="src/imgs/mobile.png" />
 </p>
 
-w.i.p
+<p>
+Splitter Calculator is a user-friendly web app that allows you to input the total bill amount, select a tip percentage, or enter a custom tip, and specify the number of people sharing the bill. It then calculates the individual tip amount and total bill amount per person, making it simple to divide costs and share expenses with friends or colleagues. Whether you're dining out, traveling, or managing household expenses.
+</p>
+
+**Key Features:**
+
+- Calculate individual tip amounts and total bill per person effortlessly. <br>
+- Choose from preset tip percentages or enter a custom tip. <br>
+- Easily adjust the number of people sharing the bill. <br>
+- User-friendly interface for a smooth experience.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,6 +98,14 @@ w.i.p
 Email: [DevTruce@Gmail.com]()
 
 Discord: [xzypher.]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+You can use this project for anything if you would like, It is a fem challenge that I completed and I might add onto it in the future.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
