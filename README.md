@@ -50,7 +50,11 @@
 
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](product-link) -->
+[![Splitter Desktop App][product-screenshot1]](product-link)
+
+<p align="center">
+  <img src="src/imgs/mobile.png" />
+</p>
 
 w.i.p
 
@@ -112,8 +116,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- ## Project ## -->
 
-[product-screenshot]: src/imgs/project-view1.png
-[product-screenshot]: src/imgs/project-view2.png
+[product-screenshot1]: src/imgs/desktop.png
+[product-screenshot2]: src/imgs/mobile.png
 [product-link]: https://devtruce.github.io/splitter-app/
 
 <!-- ## Tech & Tools ## -->
