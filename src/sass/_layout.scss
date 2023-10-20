@@ -11,15 +11,23 @@
   padding: 1rem;
   border-radius: $borderRadius-default;
   margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
 
-  //   width: 100%;
-  //   height: 100%;
+  @include respond(desktop) {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    max-width: 60rem;
+    padding: 1.5rem 3rem;
+  }
 }
 
-// .tipCalculation {
-//   width: 100%;
-//   height: 100%;
-// }
+.tipCalculation {
+  @include respond(desktop) {
+    width: 50%;
+  }
+}
 
 .billInputContainer {
   text-align: left;
@@ -72,6 +80,10 @@
   &Text {
     margin: 1.5rem 0 1rem 0;
   }
+
+  @include respond(desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .buttonStyles {
@@ -107,6 +119,13 @@
   column-gap: 1rem;
   color: $white;
   margin-bottom: 1.5rem;
+
+  @include respond(desktop) {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
 
   // &5P {
   // }
@@ -196,6 +215,11 @@
   border-radius: $borderRadius-small;
   width: 100%;
   padding: 2rem 1rem;
+
+  @include respond(desktop) {
+    margin-left: 3rem;
+    width: 50%;
+  }
 }
 
 .tipDisplay {
@@ -204,6 +228,16 @@
     justify-content: space-between;
 
     margin-top: 1rem;
+    &:first-child {
+      @include respond(desktop) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include respond(desktop) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
 
     &Text {
       color: $white;

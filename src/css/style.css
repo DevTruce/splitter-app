@@ -38,8 +38,25 @@ body {
 .container {
   background-color: hsl(0, 0%, 100%);
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 76.875em) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    max-width: 60rem;
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media only screen and (min-width: 76.875em) {
+  .tipCalculation {
+    width: 50%;
+  }
 }
 
 .billInputContainer {
@@ -67,7 +84,7 @@ body {
   height: 3rem;
   width: 100%;
   border: 0.1px solid transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   padding: 0.3rem 0.6rem 0.3rem 0.3rem;
   box-sizing: border-box;
 }
@@ -89,13 +106,18 @@ body {
 .selectTipText {
   margin: 1.5rem 0 1rem 0;
 }
+@media only screen and (min-width: 76.875em) {
+  .selectTip {
+    margin-bottom: 0;
+  }
+}
 
 .buttonStyles {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: hsl(183, 100%, 15%);
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   height: 3rem;
   width: 100%;
   border: 1px solid transparent;
@@ -117,6 +139,14 @@ body {
   column-gap: 1rem;
   color: hsl(0, 0%, 100%);
   margin-bottom: 1.5rem;
+}
+@media only screen and (min-width: 76.875em) {
+  .tipPercentButton {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
 }
 .tipPercentButtonCustomP {
   text-align: center;
@@ -154,7 +184,7 @@ body {
   height: 3rem;
   width: 100%;
   border: 0.1rem solid transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   padding: 0.3rem 0.6rem 0.3rem 0.3rem;
 }
 .numberOfPeopleInputContainer {
@@ -178,15 +208,32 @@ body {
   align-items: space-between;
   justify-content: space-between;
   background-color: hsl(183, 100%, 15%);
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   width: 100%;
   padding: 2rem 1rem;
+}
+@media only screen and (min-width: 76.875em) {
+  .tipDisplayContainer {
+    margin-left: 3rem;
+    width: 50%;
+  }
 }
 
 .tipDisplaySection {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+@media only screen and (min-width: 76.875em) {
+  .tipDisplaySection:first-child {
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (min-width: 76.875em) {
+  .tipDisplaySection {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 .tipDisplaySectionText {
   color: hsl(0, 0%, 100%);
@@ -213,7 +260,7 @@ body {
   font-weight: 700;
   color: hsl(183, 100%, 15%);
   border: 1px solid transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   margin-top: 1.5rem;
   height: 3rem;
 }
