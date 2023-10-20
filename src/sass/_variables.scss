@@ -18,13 +18,18 @@ $font-large: 1.5rem; //24px
 $font-Xlarge: 2rem; //32px
 
 $font-20: 1.25rem; //20px
+
+$borderRadius-small: 0.5rem;
+$borderRadius-default: 0.8rem;
 //////////////////////////////////////////////////
 // MEDIA QUERY MANAGER
-/*
-The designs were created to the following widths:
+// built mobile first!
 
-- Mobile: 375px
-- Desktop: 1440px
-*/
-$borderRadius-small: 0.2rem;
-$borderRadius-default: 0.5rem;
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 76.875em) {
+      // 1230px
+      @content;
+    }
+  }
+}
