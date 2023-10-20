@@ -129,6 +129,14 @@
     font-size: inherit;
     color: $very-dark-cyan;
     background-color: $very-light-grayish-cyan;
+
+    &:focus {
+      outline: 0.2rem solid $color-strong-cyan;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 

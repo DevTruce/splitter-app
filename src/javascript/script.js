@@ -33,19 +33,11 @@ const calulateTip = function (billAmout, percentAmount) {
     (billInputValue * tipPercentInputValue) / numberOfPeopleInputValue
   );
   displayTipAmount.textContent = `$${tipAmount}`;
-  console.log(`current tip amount is ${tipAmount}`);
-  console.log(`current bill Input is ${billInputValue}`);
-  console.log(`current tip percent is ${tipPercentInputValue}`);
-  console.log(`current number of people is ${numberOfPeopleInputValue}`);
 };
 
 const calulateTotal = function () {
   totalAmount = billInputValue / numberOfPeopleInputValue + tipAmount;
   displayTotalAmount.textContent = `$${totalAmount}`;
-  console.log(`current total amount is ${totalAmount}`);
-  console.log(`current bill Input is ${billInputValue}`);
-  console.log(`current tip amount is ${tipAmount}`);
-  console.log(`current number of people is ${numberOfPeopleInputValue}`);
 };
 
 const resetAll = function () {
@@ -75,7 +67,7 @@ const calcBillEnter = function () {
     } else {
       inputBill.classList.add("belowZero");
       inputBill.value = "";
-      inputBill.placeholder = "Must be exceed 1";
+      inputBill.placeholder = "Must exceed 1";
     }
   }
 };
@@ -90,7 +82,7 @@ const calcBillBlur = function () {
   } else {
     inputBill.classList.add("belowZero");
     inputBill.value = "";
-    inputBill.placeholder = "Must be exceed 1";
+    inputBill.placeholder = "Must exceed 1";
   }
 };
 
@@ -121,51 +113,7 @@ const calcNumberOfPeopleBlur = function () {
   }
 };
 
-/////////////////////////////////////////////////
-//// EVENT LISTENERS
-
-inputBill.addEventListener("keyup", function (event) {
-  calcBillEnter();
-});
-
-inputBill.addEventListener("blur", function (event) {
-  calcBillBlur();
-});
-
-inputNumberOfPeople.addEventListener("keyup", function (event) {
-  calcNumberOfPeopleEnter();
-});
-
-inputNumberOfPeople.addEventListener("blur", function (event) {
-  calcNumberOfPeopleBlur();
-});
-
-btn5Percent.addEventListener("click", function (event) {
-  tipPercentInputValue = 0.05;
-  calulateTip();
-  calulateTotal();
-});
-btn10Percent.addEventListener("click", function (event) {
-  tipPercentInputValue = 0.1;
-  calulateTip();
-  calulateTotal();
-});
-btn15Percent.addEventListener("click", function (event) {
-  tipPercentInputValue = 0.15;
-  calulateTip();
-  calulateTotal();
-});
-btn25Percent.addEventListener("click", function (event) {
-  tipPercentInputValue = 0.25;
-  calulateTip();
-  calulateTotal();
-});
-btn50Percent.addEventListener("click", function (event) {
-  tipPercentInputValue = 0.5;
-  calulateTip();
-  calulateTotal();
-});
-btnCustomPercent.addEventListener("keyup", function (event) {
+const calcCustomPercentEnter = function (event) {
   if (
     event.key === "Enter" ||
     (event.key === 13 && !isNaN(btnCustomPercent.value))
@@ -174,8 +122,67 @@ btnCustomPercent.addEventListener("keyup", function (event) {
     calulateTip();
     calulateTotal();
   }
+};
+
+const calcCustomPercentBlur = function (event) {
+  if (btnCustomPercent.value > 0 && !isNaN(btnCustomPercent.value)) {
+    console.log(`workiggggggg`);
+    tipPercentInputValue = Number(btnCustomPercent.value) / 100;
+    calulateTip();
+    calulateTotal();
+  }
+};
+/////////////////////////////////////////////////
+//// EVENT LISTENERS
+
+inputBill.addEventListener("keyup", function () {
+  calcBillEnter();
 });
 
-btnRest.addEventListener("click", function (event) {
+inputBill.addEventListener("blur", function () {
+  calcBillBlur();
+});
+
+inputNumberOfPeople.addEventListener("keyup", function () {
+  calcNumberOfPeopleEnter();
+});
+
+inputNumberOfPeople.addEventListener("blur", function () {
+  calcNumberOfPeopleBlur();
+});
+
+btn5Percent.addEventListener("click", function () {
+  tipPercentInputValue = 0.05;
+  calulateTip();
+  calulateTotal();
+});
+btn10Percent.addEventListener("click", function () {
+  tipPercentInputValue = 0.1;
+  calulateTip();
+  calulateTotal();
+});
+btn15Percent.addEventListener("click", function () {
+  tipPercentInputValue = 0.15;
+  calulateTip();
+  calulateTotal();
+});
+btn25Percent.addEventListener("click", function () {
+  tipPercentInputValue = 0.25;
+  calulateTip();
+  calulateTotal();
+});
+btn50Percent.addEventListener("click", function () {
+  tipPercentInputValue = 0.5;
+  calulateTip();
+  calulateTotal();
+});
+btnCustomPercent.addEventListener("keyup", function () {
+  calcCustomPercentEnter();
+});
+btnCustomPercent.addEventListener("blur", function () {
+  calcCustomPercentBlur();
+});
+
+btnRest.addEventListener("click", function () {
   resetAll();
 });
