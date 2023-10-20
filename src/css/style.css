@@ -44,6 +44,7 @@ body {
 
 .billInputContainer {
   text-align: left;
+  width: 100%;
 }
 
 .bill {
@@ -65,9 +66,10 @@ body {
   color: hsl(183, 100%, 15%);
   height: 3rem;
   width: 100%;
-  border: 0.1rem solid transparent;
+  border: 0.1px solid transparent;
   border-radius: 0.2rem;
   padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+  box-sizing: border-box;
 }
 .billInputSVG {
   position: relative;
@@ -137,6 +139,9 @@ body {
   border: 0.1rem solid transparent;
   border-radius: 0.2rem;
   padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+}
+.numberOfPeopleInputContainer {
+  width: 100%;
 }
 .numberOfPeopleInputSVG {
   position: relative;

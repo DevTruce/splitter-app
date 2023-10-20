@@ -23,6 +23,7 @@
 
 .billInputContainer {
   text-align: left;
+  width: 100%;
 }
 
 .bill {
@@ -33,7 +34,6 @@
   &Text {
     align-self: flex-start;
     margin-bottom: -1.2rem;
-    // margin-left: -0.3rem;
   }
 
   &Input {
@@ -46,9 +46,10 @@
     color: $very-dark-cyan;
     height: 3rem;
     width: 100%;
-    border: 0.1rem solid transparent;
+    border: 0.1px solid transparent;
     border-radius: $borderRadius-small;
     padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+    box-sizing: border-box;
 
     &SVG {
       position: relative;
@@ -70,7 +71,6 @@
   justify-content: center;
   background-color: $very-dark-cyan;
   border-radius: $borderRadius-small;
-  // padding: 0.1rem 0.5rem 0.1rem 0.5rem;
   height: 3rem;
   width: 100%;
   border: 1px solid transparent;
@@ -131,7 +131,6 @@
   &Text {
     align-self: flex-start;
     margin-bottom: -1.2rem;
-    // margin-left: -0.3rem;
   }
 
   &Input {
@@ -147,6 +146,10 @@
     border: 0.1rem solid transparent;
     border-radius: $borderRadius-small;
     padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+
+    &Container {
+      width: 100%;
+    }
 
     &SVG {
       position: relative;
