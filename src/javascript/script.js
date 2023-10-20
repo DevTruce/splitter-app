@@ -113,15 +113,17 @@ const calcCustomPercentBlur = function (event) {
 /////////////////////////////////////////////////
 //// ALLOW USER TO RESET THE CALCULATOR
 const resetAll = function () {
-  // Variable Reset
+  // reset variables
   billInputValue = 0;
   tipPercentInputValue = 0;
   numberOfPeopleInputValue = 1;
-
   tipAmount = 0;
   totalAmount = 0;
 
-  // Reset Inputs
+  // hide cantBeZero incase it was not hidden already
+  cantBeZero.classList.add("hide");
+
+  // reset all input fields
   inputBill.value = "";
   inputNumberOfPeople.value = "";
   displayTipAmount.textContent = "$0";
