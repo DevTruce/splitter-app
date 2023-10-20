@@ -71,14 +71,11 @@ inputNumberOfPeople.addEventListener("keyup", function (event) {
       inputNumberOfPeople.classList.remove("belowZero");
       calulateTip();
       calulateTotal();
-
-      console.log(`RUN CALCS`);
       return;
     } else {
       inputNumberOfPeople.classList.add("belowZero");
       inputNumberOfPeople.value = "";
       inputNumberOfPeople.placeholder = "Must be at least 1";
-      console.log(`ADD RED BORDER`);
     }
   }
 });
