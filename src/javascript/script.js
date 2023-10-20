@@ -69,7 +69,7 @@ const calcBillBlur = function () {
 
 /////////////////////////////////////////////////
 //// RUN TIP, TOTAL, CAL FUNCTION TO GENERATE NEW NUMBER OF PEOPLE WHEN USER PRESSES ENTER OR CLICKS OFF INPUT FIELD
-const calcNumberOfPeople = function (event) {
+const calcNumberOfPeople = function () {
   if (numberOfPeopleInputValue > 0) {
     cantBeZero.classList.add("hide");
     calulateTip();
@@ -85,8 +85,13 @@ const calcNumberOfPeopleEnter = function () {
   }
 };
 const calcNumberOfPeopleBlur = function () {
-  numberOfPeopleInputValue = Number(inputNumberOfPeople.value);
-  calcNumberOfPeople();
+  if (
+    Number(inputNumberOfPeople.value) > 0 &&
+    !isNaN(inputNumberOfPeople.value)
+  ) {
+    numberOfPeopleInputValue = Number(inputNumberOfPeople.value);
+    calcNumberOfPeople();
+  }
 };
 
 /////////////////////////////////////////////////
