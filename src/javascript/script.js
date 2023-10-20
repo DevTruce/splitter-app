@@ -24,6 +24,8 @@ let numberOfPeopleInputValue = 2;
 let tipAmount = 0;
 let totalAmount = 0;
 
+/////////////////////////////////////////////////
+//// FUNCTIONS
 const calulateTip = function (billAmout, percentAmount) {
   tipAmount = Math.round(
     (billInputValue * tipPercentInputValue) / numberOfPeopleInputValue
@@ -38,71 +40,46 @@ const calulateTotal = function () {
 /////////////////////////////////////////////////
 //// EVENT LISTENERS
 
-const checkBillInput = function () {
-  inputBill.addEventListener("keyup", function (event) {
-    if (
-      event.key === "Enter" ||
-      (event.key === 13 && !isNaN(inputBill.value))
-    ) {
-      billInputValue = Number(inputBill.value);
-      calulateTip();
-      calulateTotal();
+inputBill.addEventListener("keyup", function (event) {
+  if (event.key === "Enter" || (event.key === 13 && !isNaN(inputBill.value))) {
+    billInputValue = Number(inputBill.value);
+    calulateTip();
+    calulateTotal();
+  }
+});
 
-      console.log(`Bill Input Value: ${typeof billInputValue}`); // DEBUGGING
-      console.log(`Bill Input Value: ${billInputValue}`); // DEBUGGING
-    }
-  });
-};
-
-const checkNumberOfPeopleInput = function () {
-  inputNumberOfPeople.addEventListener("keyup", function (event) {
-    if (
-      event.key === "Enter" ||
-      (event.key === 13 && !isNaN(inputBill.value))
-    ) {
-      numberOfPeopleInputValue = Number(inputNumberOfPeople.value);
-      calulateTip();
-      calulateTotal();
-
-      console.log(`Number of people: ${numberOfPeopleInputValue}`); // DEBUGGING
-    }
-  });
-};
+inputNumberOfPeople.addEventListener("keyup", function (event) {
+  if (event.key === "Enter" || (event.key === 13 && !isNaN(inputBill.value))) {
+    numberOfPeopleInputValue = Number(inputNumberOfPeople.value);
+    calulateTip();
+    calulateTotal();
+  }
+});
 
 btn5Percent.addEventListener("click", function (event) {
   tipPercentInputValue = 0.05;
   calulateTip();
   calulateTotal();
-
-  console.log(`Tip percent: ${tipPercentInputValue}`); // DEBUGGING
 });
 btn10Percent.addEventListener("click", function (event) {
   tipPercentInputValue = 0.1;
   calulateTip();
   calulateTotal();
-
-  console.log(`Tip percent: ${tipPercentInputValue}`); // DEBUGGING
 });
 btn15Percent.addEventListener("click", function (event) {
   tipPercentInputValue = 0.15;
   calulateTip();
   calulateTotal();
-  console.log(tipAmount, totalAmount); // DEBUGGING
-
-  console.log(`Tip percent: ${tipPercentInputValue}`); // DEBUGGING
 });
 btn25Percent.addEventListener("click", function (event) {
   tipPercentInputValue = 0.25;
   calulateTip();
   calulateTotal();
-
-  console.log(`Tip percent: ${tipPercentInputValue}`); // DEBUGGING
 });
 btn50Percent.addEventListener("click", function (event) {
   tipPercentInputValue = 0.5;
   calulateTip();
   calulateTotal();
-  console.log(`Tip percent: ${tipPercentInputValue}`); // DEBUGGING
 });
 btnCustomPercent.addEventListener("keyup", function (event) {
   if (
@@ -112,17 +89,5 @@ btnCustomPercent.addEventListener("keyup", function (event) {
     tipPercentInputValue = Number(btnCustomPercent.value);
     calulateTip();
     calulateTotal();
-
-    console.log(`Custom tip percent: ${tipPercentInputValue}`); // DEBUGGING
   }
 });
-
-checkBillInput();
-// checkTipAmountInput();
-checkNumberOfPeopleInput();
-
-const updateTipUI = function () {
-  displayTipAmount.textContent = `$${tipAmount}`;
-};
-
-updateTipUI();
