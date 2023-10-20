@@ -11,3 +11,6 @@ const btn25Percent = document.getElementById("tipPercentButton25P");
 const btn50Percent = document.getElementById("tipPercentButton50P");
 const btnCustomPercent = document.getElementById("tipPercentButtonCustomP");
 const btnRest = document.getElementById("resetButton");
+
+const displayTipAmount = document.getElementById("totalTip");
+const displayTotalAmount = document.getElementById("totalAmount");
