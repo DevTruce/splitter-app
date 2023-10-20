@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap");
-/*
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-*/
 *,
 *::before,
 *::after {
@@ -30,6 +24,29 @@ body {
   justify-content: center;
 }
 
+.creator {
+  margin-left: 0.5rem;
+}
+
+.belowZero {
+  outline: 0.2rem solid red !important;
+}
+.belowZero:hover {
+  outline: 0.2rem solid red !important;
+}
+
+.cantBeZero {
+  position: relative;
+  left: 8.5rem;
+  top: 1.2rem;
+  font-size: 0.813rem;
+  color: red;
+}
+
+.hide {
+  opacity: 0;
+}
+
 .headerLogo {
   position: relative;
   top: 2.5rem;
@@ -38,8 +55,25 @@ body {
 .container {
   background-color: hsl(0, 0%, 100%);
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 76.875em) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    max-width: 60rem;
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 76.875em) {
+  .tipCalculation {
+    width: 50%;
+  }
 }
 
 .billInputContainer {
@@ -67,7 +101,7 @@ body {
   height: 3rem;
   width: 100%;
   border: 0.1px solid transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   padding: 0.3rem 0.6rem 0.3rem 0.3rem;
   box-sizing: border-box;
 }
@@ -89,13 +123,18 @@ body {
 .selectTipText {
   margin: 1.5rem 0 1rem 0;
 }
+@media only screen and (min-width: 76.875em) {
+  .selectTip {
+    margin-bottom: 0;
+  }
+}
 
 .buttonStyles {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: hsl(183, 100%, 15%);
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   height: 3rem;
   width: 100%;
   border: 1px solid transparent;
@@ -118,12 +157,26 @@ body {
   color: hsl(0, 0%, 100%);
   margin-bottom: 1.5rem;
 }
+@media only screen and (min-width: 76.875em) {
+  .tipPercentButton {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+}
 .tipPercentButtonCustomP {
   text-align: center;
   font-family: inherit;
   font-size: inherit;
   color: hsl(183, 100%, 15%);
   background-color: hsl(189, 41%, 97%);
+}
+.tipPercentButtonCustomP:focus {
+  outline: 0.2rem solid hsl(172, 67%, 45%);
+}
+.tipPercentButtonCustomP:hover {
+  cursor: pointer;
 }
 
 .numberOfPeople {
@@ -148,7 +201,7 @@ body {
   height: 3rem;
   width: 100%;
   border: 0.1rem solid transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   padding: 0.3rem 0.6rem 0.3rem 0.3rem;
 }
 .numberOfPeopleInputContainer {
@@ -172,15 +225,32 @@ body {
   align-items: space-between;
   justify-content: space-between;
   background-color: hsl(183, 100%, 15%);
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   width: 100%;
   padding: 2rem 1rem;
+}
+@media only screen and (min-width: 76.875em) {
+  .tipDisplayContainer {
+    margin-left: 3rem;
+    width: 50%;
+  }
 }
 
 .tipDisplaySection {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+@media only screen and (min-width: 76.875em) {
+  .tipDisplaySection:first-child {
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (min-width: 76.875em) {
+  .tipDisplaySection {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 .tipDisplaySectionText {
   color: hsl(0, 0%, 100%);
@@ -194,12 +264,6 @@ body {
   color: hsl(172, 67%, 45%);
 }
 
-.attribution {
-  margin-top: 1rem;
-  position: relative;
-  bottom: 0.5rem;
-}
-
 .resetButton {
   background-color: hsl(172, 67%, 45%);
   font-family: "Space Mono";
@@ -207,7 +271,7 @@ body {
   font-weight: 700;
   color: hsl(183, 100%, 15%);
   border: 1px solid transparent;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   margin-top: 1.5rem;
   height: 3rem;
 }
@@ -216,27 +280,10 @@ body {
   cursor: pointer;
 }
 
-.creator {
-  margin-left: 0.5rem;
-}
-
-.belowZero {
-  outline: 0.2rem solid red !important;
-}
-.belowZero:hover {
-  outline: 0.2rem solid red !important;
-}
-
-.cantBeZero {
+.attribution {
+  margin-top: 1rem;
   position: relative;
-  left: 8.5rem;
-  top: 1.2rem;
-  font-size: 0.813rem;
-  color: red;
-}
-
-.hide {
-  opacity: 0;
+  bottom: 0.5rem;
 }
 
 /*# sourceMappingURL=style.comp.css.map */
