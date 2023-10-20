@@ -23,12 +23,6 @@ $borderRadius-small: 0.5rem;
 $borderRadius-default: 0.8rem;
 //////////////////////////////////////////////////
 // MEDIA QUERY MANAGER
-/*
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-*/
 // built mobile first!
 
 @mixin respond($breakpoint) {

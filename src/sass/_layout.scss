@@ -1,11 +1,12 @@
 //////////////////////////////////////////////////
-//
-
+//// HEADER
 .headerLogo {
   position: relative;
   top: 2.5rem;
 }
 
+//////////////////////////////////////////////////
+//// CALCULATOR APP
 .container {
   background-color: $white;
   padding: 1rem;
@@ -19,10 +20,12 @@
     flex-direction: row;
     width: 60%;
     max-width: 60rem;
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 1.5rem;
   }
 }
 
+//////////////////////////////////////////////////
+//// USER INPUTS AREA
 .tipCalculation {
   @include respond(desktop) {
     width: 50%;
@@ -205,6 +208,8 @@
   }
 }
 
+//////////////////////////////////////////////////
+//// DISPLAY AREA
 .tipDisplayContainer {
   display: flex;
   flex-direction: column;
@@ -257,12 +262,6 @@
   }
 }
 
-.attribution {
-  margin-top: 1rem;
-  position: relative;
-  bottom: 0.5rem;
-}
-
 .resetButton {
   background-color: $color-strong-cyan;
   font-family: "Space Mono";
@@ -281,26 +280,8 @@
   }
 }
 
-.creator {
-  margin-left: 0.5rem;
-}
-
-.belowZero {
-  outline: 0.2rem solid red !important;
-
-  &:hover {
-    outline: 0.2rem solid red !important;
-  }
-}
-
-.cantBeZero {
+.attribution {
+  margin-top: 1rem;
   position: relative;
-  left: 8.5rem;
-  top: 1.2rem;
-  font-size: $font-small;
-  color: red;
-}
-
-.hide {
-  opacity: 0;
+  bottom: 0.5rem;
 }
