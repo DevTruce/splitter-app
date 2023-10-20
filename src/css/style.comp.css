@@ -65,7 +65,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 60%;
-    max-width: 60rem;
+    max-width: 57.5rem;
     padding: 1.5rem 1.5rem;
   }
 }
@@ -139,7 +139,7 @@ body {
   width: 100%;
   border: 1px solid transparent;
   font-family: "Space Mono";
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: hsl(0, 0%, 100%);
 }
