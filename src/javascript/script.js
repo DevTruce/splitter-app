@@ -17,9 +17,9 @@ const displayTotalAmount = document.querySelector(".totalAmount");
 
 /////////////////////////////////////////////////
 //// VARIABLES
-let billInputValue = 142.55;
-let tipPercentInputValue = 0.25;
-let numberOfPeopleInputValue = 2;
+let billInputValue = 0;
+let tipPercentInputValue = 0;
+let numberOfPeopleInputValue = 1;
 
 let tipAmount = 0;
 let totalAmount = 0;
