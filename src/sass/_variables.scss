@@ -1,0 +1,35 @@
+//////////////////////////////////////////////////
+// COLORS
+$color-strong-cyan: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(189, 41%, 97%);
+$faint-grayish-blue: hsl(184, 14%, 56%);
+$white: hsl(0, 0%, 100%);
+
+//////////////////////////////////////////////////
+// FONTS
+$font-small: 0.813rem; //13 px
+$font-default: 1rem; //16px
+$font-medium: 0;
+$font-large: 1.5rem; //24px
+$font-Xlarge: 2rem; //32px
+
+$font-20: 1.25rem; //20px
+
+$borderRadius-small: 0.5rem;
+$borderRadius-default: 0.8rem;
+//////////////////////////////////////////////////
+// MEDIA QUERY MANAGER
+// built mobile first!
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 76.875em) {
+      // 1230px
+      @content;
+    }
+  }
+}

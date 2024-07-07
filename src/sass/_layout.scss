@@ -1,0 +1,287 @@
+//////////////////////////////////////////////////
+//// HEADER
+.headerLogo {
+  position: relative;
+  top: 2.5rem;
+}
+
+//////////////////////////////////////////////////
+//// CALCULATOR APP
+.container {
+  background-color: $white;
+  padding: 1rem;
+  border-radius: $borderRadius-default;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(desktop) {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    max-width: 57.5rem;
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+//////////////////////////////////////////////////
+//// USER INPUTS AREA
+.tipCalculation {
+  @include respond(desktop) {
+    width: 50%;
+  }
+}
+
+.billInputContainer {
+  text-align: left;
+  width: 100%;
+}
+
+.bill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &Text {
+    align-self: flex-start;
+    margin-bottom: -1.2rem;
+  }
+
+  &Input {
+    background-color: $very-light-grayish-cyan;
+    border: none;
+    text-align: right;
+    font-family: "Space Mono";
+    font-size: $font-large;
+    font-weight: 700;
+    color: $very-dark-cyan;
+    height: 3rem;
+    width: 100%;
+    border: 0.1px solid transparent;
+    border-radius: $borderRadius-small;
+    padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: 0.2rem solid $color-strong-cyan;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &SVG {
+      position: relative;
+      top: 2.4rem;
+      left: 1rem;
+    }
+  }
+}
+
+.selectTip {
+  margin-bottom: 2rem;
+  &Text {
+    margin: 1.5rem 0 1rem 0;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.buttonStyles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $very-dark-cyan;
+  border-radius: $borderRadius-small;
+  height: 3rem;
+  width: 100%;
+  border: 1px solid transparent;
+
+  font-family: "Space Mono";
+  font-size: $font-large;
+  font-weight: 700;
+  color: $white;
+
+  &:hover {
+    color: $very-dark-cyan;
+    background-color: $color-strong-cyan;
+    cursor: pointer;
+  }
+
+  &:active {
+  }
+}
+
+.tipPercentButton {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1rem;
+  column-gap: 1rem;
+  color: $white;
+  margin-bottom: 1.5rem;
+
+  @include respond(desktop) {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+
+  // &5P {
+  // }
+
+  // &10P {
+  // }
+
+  // &15P {
+  // }
+
+  // &25P {
+  // }
+
+  // &50P {
+  // }
+
+  &CustomP {
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+    color: $very-dark-cyan;
+    background-color: $very-light-grayish-cyan;
+
+    &:focus {
+      outline: 0.2rem solid $color-strong-cyan;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.numberOfPeople {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+
+  &Text {
+    align-self: flex-start;
+    margin-bottom: -2.8rem;
+  }
+
+  &Input {
+    background-color: $very-light-grayish-cyan;
+    border: none;
+    text-align: right;
+    font-family: "Space Mono";
+    font-size: $font-large;
+    font-weight: 700;
+    color: $very-dark-cyan;
+    height: 3rem;
+    width: 100%;
+    border: 0.1rem solid transparent;
+    border-radius: $borderRadius-small;
+    padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+
+    &Container {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: 0.2rem solid $color-strong-cyan;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &SVG {
+      position: relative;
+      top: 2.4rem;
+      left: 1rem;
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+//// DISPLAY AREA
+.tipDisplayContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+
+  background-color: $very-dark-cyan;
+  border-radius: $borderRadius-small;
+  width: 100%;
+  padding: 2rem 1rem;
+
+  @include respond(desktop) {
+    margin-left: 3rem;
+    width: 50%;
+  }
+}
+
+.tipDisplay {
+  &Section {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 1rem;
+    &:first-child {
+      @include respond(desktop) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include respond(desktop) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    &Text {
+      color: $white;
+      // &Large {
+      // }
+      &Small {
+        font-size: $font-small;
+        color: $faint-grayish-blue;
+        // opacity: 0.2;
+      }
+    }
+
+    &Amount {
+      font-size: $font-Xlarge;
+      color: $color-strong-cyan;
+    }
+  }
+}
+
+.resetButton {
+  background-color: $color-strong-cyan;
+  font-family: "Space Mono";
+  font-size: $font-20;
+  font-weight: 700;
+  color: $very-dark-cyan;
+  border: 1px solid transparent;
+  border-radius: $borderRadius-small;
+  margin-top: 1.5rem;
+  height: 3rem;
+  // margin-bottom: 3rem;
+
+  &:hover {
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+.attribution {
+  margin-top: 1rem;
+  position: relative;
+  bottom: 0.5rem;
+}

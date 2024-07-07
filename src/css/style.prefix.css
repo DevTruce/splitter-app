@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Space Mono";
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+  background-color: hsl(185, 41%, 84%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.creator {
+  margin-left: 0.5rem;
+}
+
+.belowZero {
+  outline: 0.2rem solid red !important;
+}
+.belowZero:hover {
+  outline: 0.2rem solid red !important;
+}
+
+.cantBeZero {
+  position: relative;
+  left: 8.5rem;
+  top: 1.2rem;
+  font-size: 0.813rem;
+  color: red;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.headerLogo {
+  position: relative;
+  top: 2.5rem;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 0.8rem;
+  margin-top: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (min-width: 76.875em) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 60%;
+    max-width: 57.5rem;
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 76.875em) {
+  .tipCalculation {
+    width: 50%;
+  }
+}
+
+.billInputContainer {
+  text-align: left;
+  width: 100%;
+}
+
+.bill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.billText {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: -1.2rem;
+}
+.billInput {
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  text-align: right;
+  font-family: "Space Mono";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  height: 3rem;
+  width: 100%;
+  border: 0.1px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.billInput:focus {
+  outline: 0.2rem solid hsl(172, 67%, 45%);
+}
+.billInput:hover {
+  cursor: pointer;
+}
+.billInputSVG {
+  position: relative;
+  top: 2.4rem;
+  left: 1rem;
+}
+
+.selectTip {
+  margin-bottom: 2rem;
+}
+.selectTipText {
+  margin: 1.5rem 0 1rem 0;
+}
+@media only screen and (min-width: 76.875em) {
+  .selectTip {
+    margin-bottom: 0;
+  }
+}
+
+.buttonStyles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 100%;
+  border: 1px solid transparent;
+  font-family: "Space Mono";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+.buttonStyles:hover {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  cursor: pointer;
+}
+.tipPercentButton {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1rem;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1.5rem;
+}
+@media only screen and (min-width: 76.875em) {
+  .tipPercentButton {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.tipPercentButtonCustomP {
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 41%, 97%);
+}
+.tipPercentButtonCustomP:focus {
+  outline: 0.2rem solid hsl(172, 67%, 45%);
+}
+.tipPercentButtonCustomP:hover {
+  cursor: pointer;
+}
+
+.numberOfPeople {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.numberOfPeopleText {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: -2.8rem;
+}
+.numberOfPeopleInput {
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  text-align: right;
+  font-family: "Space Mono";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  height: 3rem;
+  width: 100%;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+}
+.numberOfPeopleInputContainer {
+  width: 100%;
+}
+.numberOfPeopleInput:focus {
+  outline: 0.2rem solid hsl(172, 67%, 45%);
+}
+.numberOfPeopleInput:hover {
+  cursor: pointer;
+}
+.numberOfPeopleInputSVG {
+  position: relative;
+  top: 2.4rem;
+  left: 1rem;
+}
+
+.tipDisplayContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+@media only screen and (min-width: 76.875em) {
+  .tipDisplayContainer {
+    margin-left: 3rem;
+    width: 50%;
+  }
+}
+
+.tipDisplaySection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
+}
+@media only screen and (min-width: 76.875em) {
+  .tipDisplaySection:first-child {
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (min-width: 76.875em) {
+  .tipDisplaySection {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.tipDisplaySectionText {
+  color: hsl(0, 0%, 100%);
+}
+.tipDisplaySectionTextSmall {
+  font-size: 0.813rem;
+  color: hsl(184, 14%, 56%);
+}
+.tipDisplaySectionAmount {
+  font-size: 2rem;
+  color: hsl(172, 67%, 45%);
+}
+
+.resetButton {
+  background-color: hsl(172, 67%, 45%);
+  font-family: "Space Mono";
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  height: 3rem;
+}
+.resetButton:hover {
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.attribution {
+  margin-top: 1rem;
+  position: relative;
+  bottom: 0.5rem;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vc2Fzcy9fYmFzZS5zY3NzIiwic3R5bGUuY29tcC5jc3MiLCIuLi9zYXNzL192YXJpYWJsZXMuc2NzcyIsIi4uL3Nhc3MvX2NvbXBvbmVudHMuc2NzcyIsIi4uL3Nhc3MvX2xheW91dC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVRLHFHQUFBO0FDQVI7OztFQUdFLFVBQUE7RUFDQSxTQUFBO0VBQ0EsOEJBQUE7VUFBQSxzQkFBQTtBQ0FGOztBREdBO0VBQ0UsZUFBQTtBQ0FGOztBREdBO0VBQ0UsaUJBQUE7RUFFQSx5QkFBQTtFQUNBLGVFSmE7RUZLYixnQkFBQTtFQUVBLHlCRWpCa0I7RUZrQmxCLG9DRWhCbUI7RUZrQm5CLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0EsNEJBQUE7RUFBQSw2QkFBQTtNQUFBLDBCQUFBO1VBQUEsc0JBQUE7RUFDQSx5QkFBQTtNQUFBLHNCQUFBO1VBQUEsbUJBQUE7RUFDQSx3QkFBQTtNQUFBLHFCQUFBO1VBQUEsdUJBQUE7QUNIRjs7QUV4QkE7RUFDRSxtQkFBQTtBRjJCRjs7QUV4QkE7RUFDRSxvQ0FBQTtBRjJCRjtBRXpCRTtFQUNFLG9DQUFBO0FGMkJKOztBRXZCQTtFQUNFLGtCQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7RUFDQSxtQkRIVztFQ0lYLFVBQUE7QUYwQkY7O0FFdkJBO0VBQ0UsVUFBQTtBRjBCRjs7QUc3Q0E7RUFDRSxrQkFBQTtFQUNBLFdBQUE7QUhnREY7O0FHM0NBO0VBQ0Usa0NGRE07RUVFTixhQUFBO0VBQ0EscUJGVXFCO0VFVHJCLGdCQUFBO0VBQ0Esb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtBSDhDRjtBQ2hDSTtFRXBCSjtJQVNJLG9CQUFBO0lBQUEsb0JBQUE7SUFBQSxhQUFBO0lBQ0EsOEJBQUE7SUFBQSw2QkFBQTtRQUFBLHVCQUFBO1lB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 */

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="src/imgs/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="src/css/style.css" />
+
+    <title>Splitter Calculator</title>
+  </head>
+  <body>
+    <!-- #### SPLITTER LOGO #### -->
+    <header class="headerLogo">
+      <img src="src/imgs/logo.svg" alt="splitter" />
+    </header>
+
+    <!-- #### SPLITTER CALCULATOR #### -->
+    <main class="container">
+      <div class="tipCalculation">
+        <div class="bill">
+          <p class="billText">Bill</p>
+          <div class="billInputContainer">
+            <img class="billInputSVG" src="src/imgs/icon-dollar.svg" alt="" />
+            <input class="billInput" type="text" placeholder="0" />
+          </div>
+        </div>
+        <div class="selectTip">
+          <p class="selectTipText">Select Tip %</p>
+          <div class="tipPercentButton">
+            <button class="tipPercentButton5P buttonStyles">5%</button>
+            <button class="tipPercentButton10P buttonStyles">10%</button>
+            <button class="tipPercentButton15P buttonStyles">15%</button>
+            <button class="tipPercentButton25P buttonStyles">25%</button>
+            <button class="tipPercentButton50P buttonStyles">50%</button>
+            <input
+              type="text"
+              placeholder="CUSTOM"
+              class="tipPercentButtonCustomP buttonStyles"
+            />
+          </div>
+        </div>
+        <div class="numberOfPeople">
+          <p class="numberOfPeopleText">Number of People</p>
+          <p class="cantBeZero hide">Can't be zero.</p>
+          <div class="numberOfPeopleInputContainer">
+            <img
+              class="numberOfPeopleInputSVG"
+              src="src/imgs/icon-person.svg"
+              alt=""
+            />
+            <input class="numberOfPeopleInput" type="text" placeholder="1" />
+          </div>
+        </div>
+      </div>
+      <div class="tipDisplayContainer">
+        <div class="tipDisplay">
+          <div class="tipDisplaySection">
+            <div class="tipDisplaySectionText">
+              <p class="tipDisplaySectionTextLarge">Tip Amount</p>
+              <p class="tipDisplaySectionTextSmall">/ person</p>
+            </div>
+            <div class="tipDisplaySectionAmount totalTip">$0</div>
+          </div>
+
+          <div class="tipDisplaySection">
+            <div class="tipDisplaySectionText">
+              <p class="tipDisplaySectionTextLarge">Total</p>
+              <p class="tipDisplaySectionTextSmall">/ person</p>
+            </div>
+            <div class="tipDisplaySectionAmount totalAmount">$0</div>
+          </div>
+        </div>
+        <button class="resetButton">RESET</button>
+      </div>
+    </main>
+    <div class="attribution">
+      Coded by<a
+        class="creator"
+        href="https://github.com/DevTruce"
+        target="_blank"
+        >Truce Ramcharitar</a
+      >.
+    </div>
+  </body>
+  <p></p>
+  <script src="src/javascript/script.js"></script>
+</html>

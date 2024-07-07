@@ -1,0 +1,23 @@
+.creator {
+  margin-left: 0.5rem;
+}
+
+.belowZero {
+  outline: 0.2rem solid red !important;
+
+  &:hover {
+    outline: 0.2rem solid red !important;
+  }
+}
+
+.cantBeZero {
+  position: relative;
+  left: 8.5rem;
+  top: 1.2rem;
+  font-size: $font-small;
+  color: red;
+}
+
+.hide {
+  opacity: 0;
+}
