@@ -18,7 +18,7 @@
 <h3 align="center">Splitter Calculator App</h3>
 
   <p align="center">
-    A web app for easily splitting bills, calculating individual tip amounts, and sharing costs among friends.
+    web app for easily splitting bills, calculating individual tip amounts, and sharing costs among friends.
     <br />
     <br />
     <a href="https://devtruce.github.io/splitter-app/" target="_blank">View Demo</a>
